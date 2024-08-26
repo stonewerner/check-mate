@@ -8,6 +8,13 @@ import FileUpload from "@/components/FileUpload";
 import Navbar from "@/components/Navbar";
 import TextFlashcardGenerator from "@/components/text-flashcards";
 
+import React from 'react';
+import dynamic from 'next/dynamic';
+
+const CameraUpload = dynamic(() => import('../components/CameraUpload'), {
+  ssr: false
+});
+
 export default async function Home() {
   const { userId } = auth();
   const isAuth = !!userId;
@@ -19,12 +26,12 @@ export default async function Home() {
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
             <h1 className="mr-3 text-5xl font-semibold">
-              Generate Flashcards from Your PDF Notes
+              Split the check easier and faster with AI!
             </h1>
           </div>
 
           <p className="max-w-xl mt-1 text-lg text-slate-600">
-            Upload PDF of your notes or enter text to create flashcards.
+            Snap a picture of the check for CheckMate to break down.
           </p>
 
           {!userId && (
@@ -41,7 +48,7 @@ export default async function Home() {
           {isAuth && (
             <>
               <div className="lg:w-[50%] my-4">
-                <FileUpload />
+                <CameraUpload />
               </div>
               <p>OR</p>
               <TextFlashcardGenerator />

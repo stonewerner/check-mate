@@ -47,7 +47,7 @@
 
 ##  Overview
 
-The ai-flashcards project is a Next.js web application that leverages AI to create, purchase, and study flashcards. It integrates Tailwind CSS for enhanced styling, and uses Clerk for route protection, ensuring robust security. The app facilitates flashcard generation and checkout processes via API routes, enabling users to create and purchase custom flashcards. With AI-powered flashcard creation and seamless payment processing, ai-flashcards provides a valuable tool for efficient and personalized learning experiences.
+Check Mate!
 
 ---
 
